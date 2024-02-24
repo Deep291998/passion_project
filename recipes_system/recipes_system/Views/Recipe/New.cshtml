@@ -1,0 +1,39 @@
+﻿
+
+
+@{
+    ViewBag.Title = "New";
+}
+<a class="btn btn-primary" href="/recipe/List">Go back to list</a>
+<h2>Create recipe</h2>
+
+
+
+<form class="form-group" action="/recipe/Create" method="POST">
+    <div class="form-group m-3">
+        <label for="exampleInputName">Name:</label>
+        <input type="text" class="form-control" id="name" aria-describedby="" placeholder="Enter Recipe Name" name='Title'>
+
+    </div>
+    <div class="form-group m-3">
+        <label for="exampleInputCategories">Categories</label>
+        <select class="form-control" id="Categories" name="Categories">
+            <option value="Desert">Desert</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            
+        </select>
+    </div>
+
+
+    <div class="form-group m-3">
+        <label for="exampleInputIngredients">Ingridents</label>
+        <input type="text" class="form-control" id="Ingridents" placeholder="Ingridents" name="Ingridents">
+    </div>
+
+    <div class="form-group m-3">
+        <label for="exampleInputIngredients">Instructions</label>
+        <textarea class="form-control" id="Instructions"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

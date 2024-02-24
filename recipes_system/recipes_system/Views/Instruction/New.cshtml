@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<a class="btn btn-primary" href="/instruction/List">Go back to list</a>
+<h2>Create instruction</h2>
+<form action="/instruction/Create" method="POST">
+    <div class="form-group m-3">
+        <label>Instruction Name:</label> <input class="form-control" type="text" name="InstructionName" />
+    </div>
+
+    <div class="form-group m-3">
+        <label>Description:</label> <input class="form-control" type="text" name="Description" />
+    </div>
+    <div class="form-group m-3">
+        <label>Recipe Id:</label> <input class="form-control" type="text" name="RecipeId" />
+    </div>
+
+    <div>
+        <input class="btn btn-primary" type="submit" value="Add instruction" />
+    </div>
+</form>

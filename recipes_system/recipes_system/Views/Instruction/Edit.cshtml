@@ -1,0 +1,30 @@
+﻿@model recipes_system.Models.InstructionDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit instruction</h2>
+<a class="btn btn-primary" href="/recipe/List">Go back to list</a>
+<form action="/instruction/Update/@Model.InstructionId" method="POST">
+    <div style="display:none;">
+        @* Pass through the instruction ID *@
+        <input type="text" name="InstructionId" value="@Model.InstructionId" />
+    </div>
+    <div class="form-group m-3">
+        <label>Instruction Name:</label> <input value="@Model.InstructionName" class="form-control" type="text" name="InstructionName" />
+    </div>
+    <div class="form-group m-3">
+        <label>Decsription:</label> <input value="@Model.Description" type="text" class="form-control" name="Description" />
+    </div>
+    <div class="form-group m-3">
+        <label>Recipe Id:</label> <input class="form-control" value="@Model.RecipeId" type="text" name="RecipeId" />
+    </div>
+
+
+    <div class="form-group m-3">
+        <input type="submit" value="Update insturction" class="btn btn-primary" />
+    </div>
+</form>
+
+

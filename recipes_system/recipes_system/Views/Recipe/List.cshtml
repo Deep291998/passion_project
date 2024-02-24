@@ -1,0 +1,30 @@
+﻿@model IEnumerable<recipes_system.Models.RecipeDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+<div class="container">
+    <a href="/recipe/New" class="btn btn-primary">Add New Recipe</a>
+    <h1>Recipe List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Recipe Name</th>
+                <th></th> <!-- Empty column for Edit button -->
+                <th></th> <!-- Empty column for Delete button -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var receip in Model)
+            {
+                <tr>
+                    <td><a href="/recipe/Details/@receip.RecipeId">@receip.Title</a></td>
+                    <td><a href="/recipe/Edit/@receip.RecipeId" class="btn btn-primary">Edit</a></td>
+                    <td><a href="/recipe/DeleteConfirm/@receip.RecipeId" class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
